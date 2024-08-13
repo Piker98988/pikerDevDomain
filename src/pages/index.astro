@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.3.def.svg"/>
+    <link rel="icon" type="image/svg+xml" href="/jb.pk.def.svg"/>
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}/>
     <title>piker's hangout</title>
@@ -28,6 +28,9 @@
         font-family: "Anonymous pro", monospace;
     }
     .head3 {
+        padding-top: 5px;
+        font-size: xxx-large;
+        color: #A8A2A2;
         text-align: center;
         font-family: "Anonymous pro", monospace;
     }
@@ -62,23 +65,66 @@
         background-color: #ccc;
         cursor: pointer;
     }
+    .head5 {
+        font-size: large;
+        text-align: center;
+        color: #A8A2A2;
+    }
+    .titles {
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .svg-tit {
+        width: 15%;
+        height: 15%;
+    }
+    .svg-buttons {
+
+    }
+    .socials-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 200px;
+    }
+    .discord-embed {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-content: center;
+    }
 </style>
 
 <div class="header">
     <h1 class="code-title"><strong>piker.dev</strong></h1>
     <div class="button-container">
-        <button class="button-header">setup</button>
+        <button class="button-header">my machine</button>
         <button class="button-header">socials</button>
         <button class="button-header">projects</button>
     </div>
 
 </div>
 
-<h3 class="head3">Landing page</h3>
-<p>
-    I do paragraphs. This is one.<br/>
-    This is a line break. line 2.<br/>
-    What about line 3.<br/>
-</p>
+<div class="titles">
+    <img src="jb.pk.def.svg" alt="SVG" class="svg-tit"/>
+    <h3 class="head3">piker <strong>is a dev</strong></h3>
+    <h5 class="head5">or not. I might be lying.</h5>
+</div>
+<iframe
+    class="discord-embed"
+    title="Discord user embed"
+    width="600"
+    height=300
+    sandbox="allow-scripts"
+    src="https://widgets.vendicated.dev/user?id=343383572805058560&theme=dark&banner=true&full-banner=true&rounded-corners=true&discord-icon=true&badges=true&guess-nitro=true&"
+></iframe>
+<div class="socials-container">
+    <a href="https://github.com/Piker98988"><img src="github-mark-white.svg" class="svg-buttons" alt="github"/></a>
+    <a href="copy"><img src="" class="svg-buttons" alt="discord"/></a>
+    <a href="mailto:piker98@tutanota.com"><img src="" class="svg-buttons" alt="email"/></a>
+    <a href="https://wakatime.com/@piker"><img src="" class="svg-buttons" alt="wakatime"/></a>
+</div>
 </body>
 </html>
