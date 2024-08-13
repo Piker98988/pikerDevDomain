@@ -2,12 +2,13 @@
 
 ---
 <html lang="en">
+
 <head>
     <meta charset="utf-8"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.3.def.svg"/>
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}/>
-    <title>piker is a dev</title>
+    <title>piker's hangout</title>
 </head>
 <style is:global>
     body {
@@ -20,8 +21,10 @@
         text-align: left;
         background-color: #4C505B;
         color: white;
-        padding: 4px 8px;
+        padding: 6px 15px;
         border-radius: 4px;
+        font-size: x-large;
+        font-weight: bold;
         font-family: "Anonymous pro", monospace;
     }
     .head3 {
@@ -32,7 +35,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12px;
+        padding: 6px 15px;
         position: sticky;
         top: 0;
         z-index: 1;
@@ -40,15 +43,34 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: box-shadow 0.3s ease-in-out;
     }
-
     .header.sticky {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    .button-container {
+        gap: 10px;
+        display: flex;
+    }
+    .button-header {
+        background-color: #ffffff;
+        padding: 3px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        height: 30px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .button-header:hover {
+        background-color: #ccc;
+        cursor: pointer;
     }
 </style>
 
 <div class="header">
-    <h1 class="code-title"><strong>.piker</strong></h1>
-    <button>Help me</button>
+    <h1 class="code-title"><strong>piker.dev</strong></h1>
+    <div class="button-container">
+        <button class="button-header">setup</button>
+        <button class="button-header">socials</button>
+        <button class="button-header">projects</button>
+    </div>
 
 </div>
 
