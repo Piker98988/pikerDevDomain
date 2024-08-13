@@ -54,14 +54,16 @@
         display: flex;
     }
     .button-header {
-        background-color: #ffffff;
+        background-color: #4C505B;
+        color: white;
         padding: 3px 10px;
         cursor: pointer;
         border-radius: 4px;
         height: 30px;
-        transition: background-color 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
     .button-header:hover {
+        color: black;
         background-color: #ccc;
         cursor: pointer;
     }
@@ -81,22 +83,19 @@
         width: 15%;
         height: 15%;
     }
-    .svg-buttons {
-
+    .svg-social {
+        height: 72px;
     }
     .socials-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        height: 75px;
         padding-top: 200px;
-    }
-    .discord-embed {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        align-content: center;
+        padding-left: 500px;
+        padding-right: 500px;
     }
 </style>
-
 <div class="header">
     <h1 class="code-title"><strong>piker.dev</strong></h1>
     <div class="button-container">
@@ -104,7 +103,6 @@
         <button class="button-header">socials</button>
         <button class="button-header">projects</button>
     </div>
-
 </div>
 
 <div class="titles">
@@ -112,19 +110,17 @@
     <h3 class="head3">piker <strong>is a dev</strong></h3>
     <h5 class="head5">or not. I might be lying.</h5>
 </div>
-<iframe
-    class="discord-embed"
-    title="Discord user embed"
-    width="600"
-    height=300
-    sandbox="allow-scripts"
-    src="https://widgets.vendicated.dev/user?id=343383572805058560&theme=dark&banner=true&full-banner=true&rounded-corners=true&discord-icon=true&badges=true&guess-nitro=true&"
-></iframe>
 <div class="socials-container">
-    <a href="https://github.com/Piker98988"><img src="github-mark-white.svg" class="svg-buttons" alt="github"/></a>
-    <a href="copy"><img src="" class="svg-buttons" alt="discord"/></a>
-    <a href="mailto:piker98@tutanota.com"><img src="" class="svg-buttons" alt="email"/></a>
-    <a href="https://wakatime.com/@piker"><img src="" class="svg-buttons" alt="wakatime"/></a>
+    <a href="https://github.com/Piker98988" class="a-socials"><img src="github-mark-white.svg" class="svg-social" alt="github"/></a>
+    <iframe
+            title="Discord user embed"
+            width="340"
+            height=72
+            sandbox="allow-scripts"
+            src="https://widgets.vendicated.dev/user?id=969989127518953542&theme=dark&banner=false&full-banner=false&rounded-corners=true&discord-icon=true&badges=false&guess-nitro=false&"
+    ></iframe>
+    <a href="mailto:piker98@tutanota.com" class="a-socials"><img src="mail_material_96.svg" class="svg-social" alt="email"/></a>
+    <a href="https://wakatime.com/@piker" class="a-socials"><img src="Logo-inverted.svg" class="svg-social" alt="wakatime"/></a>
 </div>
 </body>
 </html>
