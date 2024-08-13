@@ -1,7 +1,6 @@
 ---
 
 ---
-
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -10,8 +9,54 @@
     <meta name="generator" content={Astro.generator}/>
     <title>piker is a dev</title>
 </head>
+<style is:global>
+    body {
+        background-color: #141D2C;
+    }
+</style>
 <body>
-<h1>Astro</h1>
-<p>This is a paragraph<p>
+<style>
+    .code-title {
+        text-align: left;
+        background-color: #4C505B;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-family: "Anonymous pro", monospace;
+    }
+    .head3 {
+        text-align: center;
+        font-family: "Anonymous pro", monospace;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: #393D49;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .header.sticky {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+</style>
+
+<div class="header">
+    <h1 class="code-title"><strong>.piker</strong></h1>
+    <button>Help me</button>
+
+</div>
+
+<h3 class="head3">Landing page</h3>
+<p>
+    I do paragraphs. This is one.<br/>
+    This is a line break. line 2.<br/>
+    What about line 3.<br/>
+</p>
 </body>
 </html>
