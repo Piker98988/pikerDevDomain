@@ -1,0 +1,19 @@
+---
+export interface Props {
+    command: string
+}
+const { command } = Astro.props;
+---
+<style>
+    .headtitle {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        font-size: xxx-large;
+        color: #4AF626;
+        text-align: left;
+        font-family: "Anonymous pro", monospace;
+        background-color: #000;
+    }
+</style>
+<h1 class="headtitle" id="console-command"><strong>> { command }</strong></h1>

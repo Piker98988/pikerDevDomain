@@ -1,0 +1,51 @@
+---
+
+import StdHeader from "../components/StdHeader.astro";
+import CodeHeading from "../components/CodeHeading.astro";---
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/jb.pk.def.svg"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>about piker</title>
+</head>
+<style is:global>
+    body {
+        background-color: #141D2C;
+    }
+</style>
+<body >
+<style>
+    .head3 {
+        padding-top: 5px;
+        font-size: xxx-large;
+        color: #A8A2A2;
+        text-align: center;
+        font-family: "Anonymous pro", monospace;
+    }
+    .head5 {
+        font-size: large;
+        text-align: center;
+        color: #A8A2A2;
+    }
+    .divider {
+        border: 1px solid;
+        margin-bottom: 5px;
+    }
+</style>
+<StdHeader/>
+<CodeHeading command="whoami"/>
+<div class="grid grid-cols-2 gap-5">
+    <div class="column">
+        <h3 class="head3">This is a head 3 in left column</h3>
+    </div>
+    <div class="column">
+        <img src="jb.pk.def.svg" alt=""/>
+    </div>
+</div>
+</body>

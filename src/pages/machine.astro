@@ -1,0 +1,118 @@
+---
+import StdHeader from "../components/StdHeader.astro";
+import CodeHeading from "../components/CodeHeading.astro";
+---
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/jb.pk.def.svg"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>piker's machine</title>
+</head>
+
+<style is:global>
+    body {
+        background-color: #141D2C;
+    }
+</style>
+
+<body>
+<style>
+    .code-title {
+        text-align: left;
+        background-color: #4C505B;
+        color: white;
+        padding: 6px 15px;
+        border-radius: 4px;
+        font-size: x-large;
+        font-weight: bold;
+        font-family: "Anonymous pro", monospace;
+    }
+    .head3 {
+        padding-top: 5px;
+        font-size: xxx-large;
+        color: #A8A2A2;
+        text-align: center;
+        font-family: "Anonymous pro", monospace;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 15px;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: #393D49;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    .header.sticky {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    .button-container {
+        gap: 10px;
+        display: flex;
+    }
+    .button-header {
+        background-color: #4C505B;
+        color: white;
+        padding: 3px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        height: 30px;
+        transition: 0.3s ease-in-out;
+    }
+    .button-header:hover {
+        color: black;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+    .head5 {
+        font-size: large;
+        text-align: center;
+        color: #A8A2A2;
+    }
+    .titles {
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .svg-tit {
+        height: 350px;
+        width: 350px;
+    }
+    .svg-social {
+        height: 72px;
+        width: 72px;
+        margin: auto;
+    }
+
+    .socials-container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding-top: 200px;
+    }
+
+    .headtitle {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        font-size: xxx-large;
+        color: #4AF626;
+        text-align: left;
+        font-family: "Anonymous pro", monospace;
+        background-color: #000;
+    }
+</style>
+<StdHeader/>
+<CodeHeading command="neofetch"/>
+</body>

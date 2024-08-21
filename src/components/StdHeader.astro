@@ -1,0 +1,63 @@
+---
+// src/components/header.astro
+export interface Props {
+
+}
+
+const {  } = Astro.props;
+---
+<style>
+    .button-header {
+        background-color: #4C505B;
+        color: white;
+        padding: 3px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        height: 30px;
+        transition: 0.3s ease-in-out;
+    }
+    .button-header:hover {
+        color: black;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+    .code-title {
+        text-align: left;
+        background-color: #4C505B;
+        color: white;
+        padding: 6px 15px;
+        border-radius: 4px;
+        font-size: x-large;
+        font-weight: bold;
+        font-family: "Anonymous pro", monospace;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 15px;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: #393D49;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    .header.sticky {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    .button-container {
+        gap: 10px;
+        display: flex;
+    }
+</style>
+
+<div class="header">
+    <a href="/" class="code-title"><strong>piker.dev</strong></a>
+    <div class="button-container">
+        <a href="/about_me" class="button-header">me</a>
+        <a href="/machine" class="button-header">machine</a>
+        <a href="/contact" class="button-header">socials</a>
+        <a href="/projects" class="button-header">projects</a>
+    </div>
+</div>
