@@ -1,10 +1,10 @@
 ---
 export interface Props {
     command: string
-    characters: string
+    characters?: string
 }
 const { command, characters } = Astro.props;
-const commandSteps: bigint = BigInt(characters);
+const commandSteps: number = Number(characters);
 ---
 <style define:vars={{ commandSteps }}>
     .headtitle-noani {
@@ -44,7 +44,7 @@ const commandSteps: bigint = BigInt(characters);
     /* typing effect */
     @keyframes typing {
         from { width: 0 }
-        to { width: /*calc(var(--commandSteps)*27)px*/100% }
+        to { width: calc(var(--commandSteps)*27)px }
     }
     .headtitle-div {
         display: flex;

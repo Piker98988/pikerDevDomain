@@ -1,10 +1,9 @@
 ---
 export interface Props {
     command: string
-    characters: string
 }
-const { command, characters } = Astro.props;
-const commandSteps = Number(characters);
+
+const { command = "placeholder" } = Astro.props;
 ---
 <style>
     /* GLOBAL STYLES */
@@ -12,28 +11,30 @@ const commandSteps = Number(characters);
         background: #333;
         padding-top: 5em;
         display: flex;
+        flex-direction: column;
         justify-content: left;
     }
 
     /* DEMO-SPECIFIC STYLES */
-    .typewriter h1 {
+    .typewriter {
+        width: 100%;
         color: #fff;
         font-family: monospace;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: .15em solid orange; /* The typwriter cursor */
         height: auto;
-        white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0; /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .15em; /* Adjust as needed */
-        animation:
-                typing 2.5s steps(20, end),
-                blink-caret .5s step-end infinite;
+        padding: 1em;
+        font-size: 2em;
+        background-color: #000;
+
+    }
+    .background {
+        width: 100%;
+        background-color: #000;
     }
 
     /* The typing effect */
     @keyframes typing {
         from { width: 0 }
-        to { width: 100% }
+        to { width: fit-content }
     }
 
     /* The typewriter cursor effect */
@@ -42,7 +43,13 @@ const commandSteps = Number(characters);
         50% { border-color: orange }
     }
 </style>
-
-<div class="typewriter">
-    <h1>{command}</h1>
+<script define:vars={{command}}>
+    import TypeIt from "typeit";
+    new TypeIt("#codeing", {
+        strings: command
+    }).go();
+</script>
+<div class="flex flex-row">
+    <h1 class="w-fit mr-3">> </h1>
+    <h1 id="codeing" class="w-fit"></h1>
 </div>
