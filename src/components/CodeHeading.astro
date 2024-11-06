@@ -1,19 +1,75 @@
 ---
 export interface Props {
     command: string
+    characters?: string
 }
-const { command } = Astro.props;
+const { command, characters } = Astro.props;
+const commandSteps: number = Number(characters);
 ---
-<style>
-    .headtitle {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 20px;
+<style define:vars={{ commandSteps }}>
+    .headtitle-noani {
+        /* To make it so we can make a border around it... */
+        display: block;
+        height: auto;
+
+        /* Styling */
+        padding-right: 10px;
         font-size: xxx-large;
+        font-weight: bold;
         color: #4AF626;
         text-align: left;
         font-family: "Anonymous pro", monospace;
+    }
+
+    .headtitle {
+        font-size: xxx-large;
+        font-family: monospace;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid #4AF626; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation:
+            typing 2.5s steps(20, end),
+            blink-caret .5s step-end infinite;
+        color: #4AF626;
+
+    }
+    @media (max-width: 599px) and (min-width: 400px) {
+        .headtitle-div {
+            width: 125%;
+        }
+    }
+    @media (max-width: 399px) {
+        .headtitle-div {
+            width: 150%;
+        }
+    }
+    /* cursor blink */
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #4AF626; }
+    }
+
+    /* typing effect */
+    @keyframes typing {
+        from { width: 0 }
+        to { width: calc(var(--commandSteps)*27)px }
+    }
+    .headtitle-div {
+        display: flex;
+        width: auto;
+        justify-content: left;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
         background-color: #000;
     }
 </style>
-<h1 class="headtitle" id="console-command"><strong>> { command }</strong></h1>
+<div>
+<div class="headtitle-div">
+    <div class="headtitle">
+        <h1>> { command }</h1>
+    </div>
+</div>
+</div>
