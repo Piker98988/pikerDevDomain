@@ -6,7 +6,6 @@ export interface Props {
 const { command = "placeholder" } = Astro.props;
 ---
 <style>
-    /* GLOBAL STYLES */
     body {
         background: #333;
         padding-top: 5em;
@@ -14,34 +13,17 @@ const { command = "placeholder" } = Astro.props;
         flex-direction: column;
         justify-content: left;
     }
-
-    /* DEMO-SPECIFIC STYLES */
-    .typewriter {
-        width: 100%;
-        color: #fff;
-        font-family: monospace;
-        height: auto;
-        padding: 1em;
-        font-size: 2em;
-        background-color: #000;
-
+    @media (max-width: 599px) and (min-width: 400px) {
+        .body {
+            width: 125%;
+        }
     }
-    .background {
-        width: 100%;
-        background-color: #000;
+    @media (max-width: 399px) {
+        .body {
+            width: 150%;
+        }
     }
 
-    /* The typing effect */
-    @keyframes typing {
-        from { width: 0 }
-        to { width: fit-content }
-    }
-
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: orange }
-    }
 </style>
 <script define:vars={{command}}>
     import TypeIt from "typeit";
